@@ -88,8 +88,6 @@ describe("webhook-event-check", () => {
 
     probot.load(async (app) => {
       spyOnLogError = jest.spyOn(app.log, "error");
-
-      app.on("*", noop);
     });
 
     // let's give the event check a moment to send its request
